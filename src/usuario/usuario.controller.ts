@@ -1,9 +1,15 @@
-import { Controller, Post } from "@nestjs/common";
+import { Body, Controller, Get, Post } from "@nestjs/common";
 
-Controller ('/usuarios')
+@Controller ('/usuarios')
+
 export class UsuarioController {
-    @Post ()
-    async criarUsuario(){
-        return 'Usuário Criado'
+    @Post()
+
+    async criaUsuario(@Body() dadosUsuario){
+        var usuario={
+            dadosUsuario : dadosUsuario,
+            status: "Usuario Criado"
+        }
+        return usuario
     }
 }

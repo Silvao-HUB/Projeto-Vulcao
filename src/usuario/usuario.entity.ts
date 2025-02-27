@@ -4,10 +4,10 @@ export class UsuarioEntity {
     idade: Number;
     cidade: string;
     email: string;
-    telefone: Number;
+    telefone: string;
     senha: string;
     
-    constructor (id: string, nome:string, idade:Number, cidade:string, email:string, telefone:Number, senha:string){
+    constructor (id: string, nome:string, idade:Number, cidade:string, email:string, telefone:string, senha:string){
         this.id = id;
         this.nome = nome;
         this.idade = idade;

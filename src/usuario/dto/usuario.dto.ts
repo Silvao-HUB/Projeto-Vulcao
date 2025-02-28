@@ -1,4 +1,5 @@
 import { IsEmail, IsInt, IsNotEmpty, IsString, MinLength } from "class-validator";
+import { EmailUnico } from "./validacao/email-unico.validator";
 
 
 export class criarUsuarioDTO {
@@ -13,6 +14,7 @@ export class criarUsuarioDTO {
     cidade:string;
 
     @IsEmail (undefined, {message:'email é válido'})
+    @EmailUnico({message: 'Email Já Cadastrado!'})
     email: string;
 
     @IsString()
@@ -20,5 +22,6 @@ export class criarUsuarioDTO {
 
     @MinLength (6,{message: 'Senha precisa conter pelo menos 6 digitos'})
     senha: string;
+
 
 }

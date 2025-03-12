@@ -8,7 +8,7 @@ export class UsuarioEntity {
     senha: string;
     
     constructor (id: string, nome:string, idade:Number, cidade:string, email:string, telefone:string, senha:string){
-        this.id = id;
+        this.id = id;   
         this.nome = nome;
         this.idade = idade;
         this.cidade = cidade;
